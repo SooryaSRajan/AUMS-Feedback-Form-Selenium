@@ -36,15 +36,12 @@ driver.implicitly_wait(5)
 driver.find_element_by_xpath("/html/body/div[3]/div[1]/div[2]/nav/div[2]/ul/li[1]/ul/li[4]/a").click()
 WebDriverWait(driver, 10).until(EC.frame_to_be_available_and_switch_to_it((By.ID,"Mainb90fae77x4fdcx4d8bx8807x6aff9afc57d8")))
 
-#TODO: Automate this part
-# table_number = int(input("Please enter the position of the feedback you want to complete: "))
-
 eval_table = driver.find_elements_by_xpath("/html/body/div/div[1]/div/table/tbody/tr")
 print("Total number of table rows: ", len(eval_table))
 
 tag_list = []
 
-for i in range(10, len(eval_table) + 1):
+for i in range(1, len(eval_table) + 1):
 
     print("Try to click on table row: ", i)
     link_path = "/html/body/div/div[1]/div/table/tbody/tr[{}]/td[1]/a".format(i)
@@ -75,7 +72,7 @@ for x in tag_list:
                     print("WebDriverException")
                     continue
 
-        for i in range(19, 24):
+        for i in range(19, 27):
             try:
                 driver.find_element_by_xpath("/html/body/div/div[8]/form/div[1]/fieldset/ol/li[{}]/div/div/div/div/div/table/tbody/tr/td[{}]/span/input".format(i, random.randint(1,4))).click()
             except WebDriverException as e:
