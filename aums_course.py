@@ -16,8 +16,8 @@ driver = webdriver.Chrome(options=options, executable_path="/opt/homebrew/bin/ch
 # driver = webdriver.Firefox()
 driver.maximize_window()
 
-username = "<YOUR ROLL NO HERE>"
-password = "<YOUR PASSWORD HERE>"
+username = input('Enter your username')
+password = input('Enter your password')
 
 #authentication part:
 driver.get("https://aumscb.amrita.edu/cas/login?service=https%3A%2F%2Faumscb.amrita.edu%2Faums%2FJsp%2FCommon%2Findex.jsp")
