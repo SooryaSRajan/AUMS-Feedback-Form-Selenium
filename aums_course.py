@@ -11,8 +11,9 @@ from selenium.webdriver.common.keys import Keys
 options = Options()
 options.add_argument("--window-size=1920x1080")
 options.add_argument("--verbose")
-# driver = webdriver.Chrome(options=options, executable_path="/opt/homebrew/bin/chromedriver")
-driver = webdriver.Edge()
+driver = webdriver.Chrome(options=options, executable_path="/opt/homebrew/bin/chromedriver")
+# driver = webdriver.Edge()
+# driver = webdriver.Firefox()
 driver.maximize_window()
 
 username = "<YOUR ROLL NO HERE>"
